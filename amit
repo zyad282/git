@@ -1,0 +1,39 @@
+void main() {
+
+
+ 
+  //String name = list;
+  List<String> list = ['task1', 'task2', 'task3'];
+
+  for (String task in list) {
+    print(task);
+  }
+
+  void addtasks(String newtask) {
+    list.add(newtask);
+  }
+
+  void removetask(String removetask) {
+    list.remove(removetask);
+  }
+
+  void showtaskes(String showtaskes) {
+    for (String task in list) {
+      print(task);
+    }
+  }
+}
+
+Future<String> fetchlist(String list ) async {
+
+  return await Future.delayed(Duration(seconds: 2), loadtasles() {
+    return list ;
+   }) ;
+
+   Future<String> fetchlist(String list ) async {
+
+  return await Future.delayed(Duration(seconds: 4), savetaskes() {
+    return list ;
+   }) ;
+
+   }
